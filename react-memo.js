@@ -9,3 +9,6 @@ useEffect(() => { console.log("I run everytime my condition is changed") }, [con
 useEffect(() => { return () => { console.log("Use this return as a 'clean up tool' (this runs when unmounting and before the actual code)") } }); // Clean up
 // 3. useMemo: will only recompute the memoized value when one of the dependencies has changed. This optimization helps to avoid expensive calculations on every render.
 const memoizedValue = useMemo(() => { computeExpensiveValue(a, b) }, [a, b]);
+// 4. useRefs: Same like state but its doesn't cause a re-render when its value updated.
+const inputEl = useRef(null);
+// 5. useContext: 
